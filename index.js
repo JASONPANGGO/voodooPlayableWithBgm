@@ -20,7 +20,7 @@ function hasScript(scriptName) {
 }
 
 /**
- *
+ * 检查是否有引用该脚本如果没就插入
  * @param {string} scriptName 脚本名称
  * @param {boolean} isAppend 是否在之后插入
  */

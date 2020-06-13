@@ -28,10 +28,11 @@ function ensureScript(scriptName, isAppend = false) {
 	if (hasScript(scriptName)) return;
 	if (isAppend) $("body").append(`<script src="./${scriptName}"></script>`);
 	else $("body").prepend(`<script src="./${scriptName}"></script>`);
-	fs.writeFileSync(targetHTML, $.html());
 }
 
 ensureScript("data.js", false);
 ensureScript("webaudio.js", false);
 ensureScript("mintegral.js", true);
+
+fs.writeFileSync(targetHTML, $.html());
 

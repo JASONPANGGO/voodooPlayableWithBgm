@@ -30,8 +30,8 @@ function ensureScript(scriptName, isAppend = false) {
 	else $("body").prepend(`<script src="./${scriptName}"></script>`);
 }
 
-ensureScript("data.js", false);
-ensureScript("webaudio.js", false);
+ensureScript("data.js");
+ensureScript("webaudio.js");
 ensureScript("mintegral.js", true);
 
 fs.writeFileSync(targetHTML, $.html());
